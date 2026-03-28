@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="he">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>גל אדלמן - קבלן שיפוצי יוקרה וגמר</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&family=Manrope:wght@400;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#745a3f",
+                        "slate-blue": "#334155",
+                        "on-primary": "#faf7f6",
+                        "on-background": "#313333",
+                        "surface": "#fcf9f8",
+                        "surface-container": "#efeded",
+                        "surface-container-low": "#f5f3f3"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "Heebo", "sans-serif"],
+                        "body": ["Heebo", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .backdrop-blur-xl { backdrop-filter: blur(24px); }
+        body { background-color: #fcf9f8; font-family: 'Heebo', sans-serif; min-height: 100vh; }
+        
+        /* Paint Bucket Animation */
+        @keyframes paintPour {
+            0% { transform: scaleY(0); }
+            45% { transform: scaleY(1); }
+            75% { transform: scaleY(1); opacity: 1; }
+            100% { transform: scaleY(1); opacity: 0; visibility: hidden; pointer-events: none; }
+        }
+        .paint-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #313333; /* Dark premium color */
+            z-index: 9999;
+            transform-origin: top;
+            animation: paintPour 2.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .paint-logo {
+            color: #faf7f6;
+            font-family: 'Manrope', 'Heebo', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            opacity: 0;
+            animation: fadeInOut 2.2s ease-in-out forwards;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(20px); }
+            30% { opacity: 1; transform: translateY(0); }
+            70% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="font-body text-[#313333] antialiased">
+
+<div class="paint-overlay">
+    <div class="paint-logo">גל אדלמן</div>
+</div>
+
+<nav class="fixed top-0 w-full flex justify-between items-center px-6 py-4 h-16 bg-[#fcf9f8]/90 backdrop-blur-xl z-50 border-b border-gray-200">
+    <div class="flex items-center gap-4">
+        <span class="material-symbols-outlined text-on-background" data-icon="menu">menu</span>
+    </div>
+    <div class="text-xl font-headline font-extrabold uppercase tracking-tighter text-[#313333]">
+        גל אדלמן
+    </div>
+    <div class="flex items-center gap-4">
+        <a href="tel:0500000000"><span class="material-symbols-outlined text-on-background" data-icon="phone_in_talk">phone_in_talk</span></a>
+    </div>
+</nav>
+
+<main class="pt-16">
+    <section class="relative h-[800px] flex items-end px-6 pb-24 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="שיפוץ משרד יוקרתי" class="w-full h-full object-cover grayscale-[20%] contrast-[110%]" src="/hero-image.jpg" onerror="this.src='https://images.unsplash.com/photo-1600607687959-ce8a6c25118c?q=80&w=2053&auto=format&fit=crop'"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#313333] via-[#313333]/40 to-transparent opacity-90"></div>
+        </div>
+        <div class="relative z-10 w-full">
+            <p class="font-body text-[#C0A080] text-sm font-bold tracking-[0.2em] mb-4 uppercase">מומחה לשיפוצי יוקרה וגמר</p>
+            <h1 class="font-headline text-white text-5xl font-extrabold leading-[1.1] mb-6 max-w-lg">גל אדלמן - אמנות הגמר והשיפוץ היוקרתי</h1>
+            <p class="text-white/80 text-lg mb-8 max-w-md font-body leading-relaxed">20+ שנות ניסיון של מצוינות בביצוע. קבלן רשום ואינסטלטור מוסמך. בונים לכם את הנכס בדיוק, ביושרה ובלי פשרות.</p>
+            <a href="#contact" class="inline-flex bg-slate-blue text-white px-8 py-5 font-body font-bold text-lg tracking-wide uppercase items-center justify-center gap-3 transition-all hover:bg-[#1e293b] active:scale-95 shadow-xl w-full sm:w-auto">
+                לקבלת הצעת מחיר וליווי אישי
+                <span class="material-symbols-outlined text-xl" data-icon="arrow_back">arrow_back</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-surface-container py-12 px-6 flex flex-wrap justify-center gap-12">
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-secondary text-3xl" data-icon="verified">verified</span>
+            <div>
+                <p class="font-body font-bold text-on-background uppercase text-sm tracking-tighter">קבלן רשום</p>
+                <p class="text-xs text-gray-500 uppercase tracking-widest">רשם הקבלנים</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-secondary text-3xl" data-icon="plumbing">plumbing</span>
+            <div>
+                <p class="font-body font-bold text-on-background uppercase text-sm tracking-tighter">אינסטלטור מוסמך</p>
+                <p class="text-xs text-gray-500 uppercase tracking-widest">משרד העבודה</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-surface">
+        <div class="mb-16">
+            <p class="font-body text-secondary text-xs font-bold tracking-[0.3em] mb-3 uppercase">ההתמחות שלנו</p>
+            <h2 class="font-headline text-on-background text-3xl font-extrabold leading-none">ביצוע וגמר פרימיום</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+            <div class="bg-surface-container-low p-8 aspect-square flex flex-col justify-between group transition-colors hover:bg-on-background">
+                <span class="material-symbols-outlined text-4xl text-secondary" data-icon="layers">layers</span>
+                <div>
+                    <h3 class="font-headline font-bold text-xl text-on-background group-hover:text-white mb-2">שיפוץ חללים מלא</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed">שיפוץ קומפלט לדירות, חדרי אמבטיה, מטבחים ומשרדים. ניהול מאלף ועד תו.</p>
+                </div>
+            </div>
+            <div class="bg-surface-container-low p-8 aspect-square flex flex-col justify-between group transition-colors hover:bg-on-background">
+                <span class="material-symbols-outlined text-4xl text-secondary" data-icon="architecture">architecture</span>
+                <div>
+                    <h3 class="font-headline font-bold text-xl text-on-background group-hover:text-white mb-2">עבודות טיח וגבס</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed">נישות מעוצבות, קירות דקורטיביים, תקרות צפות ומחיצות ברמת גימור מוזיאונית.</p>
+                </div>
+            </div>
+            <div class="bg-surface-container-low p-8 aspect-square flex flex-col justify-between group transition-colors hover:bg-on-background">
+                <span class="material-symbols-outlined text-4xl text-secondary" data-icon="water_drop">water_drop</span>
+                <div>
+                    <h3 class="font-headline font-bold text-xl text-on-background group-hover:text-white mb-2">אינסטלציה מוסמכת</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed">הקמת מערכות מים, ביוב והסקות בסטנדרטים המחמירים ביותר, על ידי איש מקצוע מוסמך.</p>
+                </div>
+            </div>
+            <div class="bg-surface-container-low p-8 aspect-square flex flex-col justify-between group transition-colors hover:bg-on-background">
+                <span class="material-symbols-outlined text-4xl text-secondary" data-icon="grid_on">grid_on</span>
+                <div>
+                    <h3 class="font-headline font-bold text-xl text-on-background group-hover:text-white mb-2">ריצוף וחיפוי</h3>
+                    <p class="text-sm text-gray-600 group-hover:text-gray-300 leading-relaxed">עבודות קרמיקה, שיש, פרקטים ובטון דקורטיבי בדיוק הנדסי מקסימלי.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center">
+            <a href="https://wa.me/972500000000" class="inline-block bg-on-background text-white px-10 py-5 font-body font-bold text-base tracking-wider uppercase transition-all hover:bg-secondary active:scale-95 shadow-lg w-full text-center sm:w-auto">
+                דברו איתנו על הפרויקט שלכם
+            </a>
+        </div>
+    </section>
+
+    <section class="py-24 px-4 bg-[#313333] overflow-hidden">
+        <div class="px-2 mb-12">
+            <p class="font-body text-secondary text-xs font-bold tracking-[0.3em] mb-3 uppercase">תיק עבודות</p>
+            <h2 class="font-headline text-white text-3xl font-extrabold leading-none">פרויקטים נבחרים</h2>
+        </div>
+        <div class="grid grid-cols-2 gap-2 mb-12">
+            <div class="col-span-2 h-80 relative overflow-hidden group">
+                <img alt="פרויקט יוקרה" class="w-full h-full object-cover" src="/project-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2000&auto=format&fit=crop'"/>
+            </div>
+            <div class="h-64 relative overflow-hidden group">
+                <img alt="מטבח מודרני" class="w-full h-full object-cover" src="/project-2.jpg" onerror="this.src='https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2000&auto=format&fit=crop'"/>
+            </div>
+            <div class="h-64 relative overflow-hidden group">
+                <img alt="עיצוב פנים" class="w-full h-full object-cover" src="/project-3.jpg" onerror="this.src='https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop'"/>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 bg-surface-container flex flex-col gap-12">
+        <div class="relative w-full aspect-[4/5] grayscale contrast-[1.1] rounded-lg overflow-hidden">
+            <img alt="גל אדלמן" class="w-full h-full object-cover" src="/gal.jpg" onerror="this.src='https://images.unsplash.com/photo-1507537362848-9c7370cb12ba?q=80&w=2000&auto=format&fit=crop'"/>
+            <div class="absolute -bottom-6 -left-6 bg-secondary w-24 h-24"></div>
+        </div>
+        <div class="flex flex-col gap-6">
+            <p class="font-body text-secondary text-xs font-bold tracking-[0.3em] uppercase">אמן הגמר והשיפוץ</p>
+            <h2 class="font-headline text-on-background text-3xl font-extrabold leading-tight">גל אדלמן</h2>
+            <div class="w-12 h-[2px] bg-secondary"></div>
+            <p class="text-gray-700 font-body leading-relaxed text-lg">
+                גל אדלמן מביא איתו ניסיון של מעל שני עשורים בתחום. שילוב ייחודי של רישום קבלני והסמכת אינסטלציה המבטיח לכם שקט נפשי מלא, בידיעה שהפרויקט מנוהל על ידי מומחה ביצוע.
+            </p>
+            <p class="text-gray-700 font-body leading-relaxed text-lg">
+                אנחנו מחויבים לעבודה באיכות בלתי מתפשרת, שימוש בחומרים הטובים ביותר, ועמידה קפדנית בלוחות זמנים. משיפוצי יוקרה פרטיים ועד חללים מסחריים מורכבים – אנחנו הופכים תוכניות למציאות.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 bg-surface">
+        <div class="mb-12">
+            <h2 class="font-headline text-on-background text-3xl font-extrabold mb-4">נתחיל את הפרויקט שלך?</h2>
+            <p class="text-gray-500 text-sm">השאר פרטים ונחזור אליך בהקדם לתיאום פגישת ייעוץ והערכת מחיר.</p>
+        </div>
+        <form class="flex flex-col gap-8">
+            <div class="group border-b border-gray-300 focus-within:border-secondary transition-colors">
+                <label class="block font-body font-bold text-[10px] uppercase tracking-widest text-gray-500 mb-1">שם מלא</label>
+                <input class="w-full bg-transparent border-none p-0 pb-3 focus:ring-0 text-on-background font-body" placeholder="הכנס שם מלא" type="text"/>
+            </div>
+            <div class="group border-b border-gray-300 focus-within:border-secondary transition-colors">
+                <label class="block font-body font-bold text-[10px] uppercase tracking-widest text-gray-500 mb-1">טלפון</label>
+                <input class="w-full bg-transparent border-none p-0 pb-3 focus:ring-0 text-on-background font-body" placeholder="050-000-0000" type="tel"/>
+            </div>
+            <button class="w-full bg-slate-blue text-white py-5 font-body font-bold text-base tracking-widest uppercase transition-colors hover:bg-on-background mt-4" type="submit">
+                שליחת פרטים
+            </button>
+        </form>
+    </section>
+</main>
+
+<footer class="w-full py-12 px-8 flex flex-col items-center gap-8 text-center bg-[#313333] mb-20">
+    <div class="text-white font-headline font-extrabold text-2xl uppercase tracking-tighter">גל אדלמן</div>
+    <div class="w-12 h-[1px] bg-gray-600"></div>
+    <p class="font-body text-[11px] leading-loose text-gray-400 max-w-xs">
+        © 2026 גל אדלמן - קבלן מומחה לשיפוצי יוקרה וגמר. כל הזכויות שמורות. ביצוע בסטנדרט הגבוה ביותר.
+    </p>
+</footer>
+
+<div class="fixed bottom-24 right-6 z-[60]">
+    <a class="flex items-center gap-3 bg-white text-on-background px-5 py-3 rounded-full shadow-2xl transition-transform hover:scale-105 active:scale-95 border border-gray-200" href="https://wa.me/972500000000?text=שלום גל, הגעתי מהאתר. אשמח לקבל הצעת מחיר" target="_blank">
+        <div class="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center shrink-0">
+            <svg fill="white" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.893-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.481 8.403 0 6.556-5.332 11.89-11.893 11.89-2.015 0-3.991-.511-5.741-1.486l-6.252 1.705zm6.786-4.03c1.554.921 3.15 1.403 4.733 1.403 5.114 0 9.273-4.158 9.273-9.271 0-2.471-.962-4.793-2.71-6.541-1.748-1.748-4.072-2.711-6.563-2.711-5.123 0-9.288 4.157-9.288 9.271 0 1.684.449 3.321 1.3 4.74l-.443 1.619 1.7-.463zm10.973-7.135c-.008-.021-.11-.144-.327-.252-.216-.108-1.277-.63-1.474-.701-.195-.072-.339-.108-.481.108-.142.217-.552.701-.677.844-.125.144-.251.162-.467.054-.216-.108-.915-.337-1.742-1.077-.644-.575-1.08-1.285-1.206-1.502-.126-.217-.014-.334.094-.442.099-.097.217-.252.327-.379.11-.125.146-.216.218-.36.072-.144.036-.27-.018-.379-.054-.108-.481-1.159-.659-1.588-.172-.418-.348-.362-.481-.368-.125-.006-.27-.007-.413-.007s-.377.054-.574.271c-.197.217-.751.734-.751 1.79 0 1.055.767 2.074.874 2.219.108.144 1.509 2.304 3.657 3.232.51.22 1.01.352 1.354.463.511.162.977.139 1.345.084.41-.061 1.277-.522 1.457-1.026.181-.504.181-.937.126-1.026z"></path>
+            </svg>
+        </div>
+        <span class="font-body font-bold text-sm uppercase tracking-tight pl-2">וואטסאפ לתיאום פגישה</span>
+    </a>
+</div>
+
+</body>
+</html>
